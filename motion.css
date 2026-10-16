@@ -1,0 +1,74 @@
+/* Keep the supplied portrait clear, with its natural color and a stable crop. */
+.portrait-card > img { object-position: 52% 27%; filter: saturate(.9); opacity: 1; }
+.hero-person img { object-position: 52% 28%; filter: none; }
+.credentials .credential-card:last-child:nth-child(3) { grid-column: 1 / -1; }
+.credentials .credential-card:last-child:nth-child(3) h3 { max-width: none; }
+.motion-control { display: flex; justify-content: flex-end; margin-top: -49px; margin-bottom: 24px; position: relative; }
+#motion-toggle { background: transparent; border: 1px solid #35423d; border-radius: 20px; color: #9dafaa; padding: 7px 12px; font: 9px var(--mono); line-height: 1.4; }
+#motion-toggle:hover:not(:disabled) { color: var(--accent); border-color: #749985; }
+#motion-toggle:disabled { cursor: default; opacity: .7; }
+#motion-toggle[hidden] { display: none; }
+.signal { opacity: 0; fill: #d0fbe2; }
+.cloud-assembly { transform-origin: 280px 250px; }
+.project-visual { isolation: isolate; }
+.project-visual::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 20%, #d7ffe509 45%, #d7ffe514 50%, transparent 70%); transform: translateX(-120%); opacity: 0; }
+
+/* All motion requires the preference-controlled root class. */
+  .motion-enabled .hero-art.motion-visible .cloud-assembly { animation: cloud-float 7s ease-in-out infinite; }
+  .motion-enabled .hero-art.motion-visible .network-node { animation: node-glow 3.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .motion-enabled .hero-art.motion-visible .network-node:nth-of-type(2) { animation-delay: .7s; }
+  .motion-enabled .hero-art.motion-visible .network-node:nth-of-type(3) { animation-delay: 1.4s; }
+  .motion-enabled .hero-art.motion-visible .signal-a { animation: signal-route-a 4.5s ease-in-out infinite; }
+  .motion-enabled .hero-art.motion-visible .signal-b { animation: signal-route-b 4.5s 1.8s ease-in-out infinite; }
+  .motion-enabled .project-visual.motion-visible::after { animation: diagram-sweep 7s ease-in-out infinite; }
+  .motion-enabled .project-card:nth-child(2) .project-visual::after { animation-delay: 1.3s; }
+  .motion-enabled .project-card:nth-child(3) .project-visual::after { animation-delay: 2.6s; }
+  .motion-enabled .project-visual.motion-visible path[stroke-dasharray] { animation: flow 12s linear infinite; }
+  .motion-enabled .project-details[open] .project-facts { animation: details-enter .3s ease-out; }
+  .motion-enabled .project-card { transition: border-color .25s, transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+  .motion-enabled .project-diagram { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+  .motion-enabled .skill-card { transition: border-color .25s, background .25s; }
+  .motion-enabled .skill-icon { transition: transform .35s; }
+  .motion-enabled .portrait-card > img { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+  .motion-enabled .button svg, .motion-enabled .button-primary > span:last-child { transition: transform .3s; }
+  .motion-enabled #main-nav a { position: relative; }
+  .motion-enabled #main-nav a::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 100%; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+  .motion-enabled #main-nav a:hover::after, .motion-enabled #main-nav a:focus-visible::after { transform: scaleX(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .motion-enabled .project-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px #0003; }
+    .motion-enabled .project-card:hover .project-diagram { transform: scale(1.035); }
+    .motion-enabled .skill-card:hover { border-color: #537063; background: #13201e; }
+    .motion-enabled .skill-card:hover .skill-icon { transform: translateY(-3px) rotate(-5deg); }
+    .motion-enabled .portrait-card:hover > img { transform: scale(1.035); }
+    .motion-enabled .button:hover svg { transform: translateY(2px); }
+    .motion-enabled .button-primary:hover > span:last-child { transform: translate(2px, -2px); }
+  }
+
+/* Off-screen, hidden-tab, user-paused and OS-reduced motion all stop ambient work. */
+.hero-art:not(.motion-visible) .flow-line,
+.motion-paused *, .motion-paused *::before, .motion-paused *::after { animation-play-state: paused !important; }
+.motion-paused .project-visual::after { opacity: 0; }
+.motion-paused .signal { opacity: 0; }
+
+@keyframes cloud-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes node-glow { 0%, 100% { opacity: .5; transform: scale(.85); } 45% { opacity: 1; transform: scale(1.2); } }
+@keyframes signal-route-a {
+  0% { transform: translate(168px, 258px); opacity: 0; }
+  8% { opacity: 1; }
+  48% { transform: translate(280px, 318px); opacity: 1; }
+  88% { transform: translate(280px, 210px); opacity: 1; }
+  100% { transform: translate(280px, 210px); opacity: 0; }
+}
+@keyframes signal-route-b {
+  0% { transform: translate(392px, 258px); opacity: 0; }
+  8% { opacity: 1; }
+  48% { transform: translate(280px, 318px); opacity: 1; }
+  88% { transform: translate(280px, 210px); opacity: 1; }
+  100% { transform: translate(280px, 210px); opacity: 0; }
+}
+@keyframes diagram-sweep { 0%, 20% { transform: translateX(-120%); opacity: 0; } 35% { opacity: 1; } 70%, 100% { transform: translateX(120%); opacity: 0; } }
+@keyframes details-enter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 850px) { .credentials .credential-card:last-child:nth-child(3) { grid-column: auto; } }
+@media (max-width: 640px) { .motion-control { margin-top: -10px; margin-bottom: 25px; justify-content: center; }.credentials .credential-card:last-child:nth-child(3) { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { html:not(.motion-enabled) .signal, html:not(.motion-enabled) .project-visual::after { display: none; } }

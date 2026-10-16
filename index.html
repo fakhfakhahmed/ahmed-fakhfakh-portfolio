@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a1015">
   <title>Ahmed Fakhfakh — DevOps & Kubernetes Engineer</title>
-  <meta name="description" content="Ahmed Fakhfakh, CKA-certified DevOps engineer in Tunisia. Kubernetes, Azure AKS, infrastructure as code, CI/CD, and full-stack engineering.">
+  <meta name="description" content="Ahmed Fakhfakh, DevOps engineer in Tunisia, certified CKA and AZ-104. Kubernetes, Azure AKS, Argo CD, CI/CD, infrastructure as code, and observability.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ahmed Fakhfakh — DevOps & Kubernetes Engineer">
-  <meta property="og:description" content="From code to cloud. Explore the infrastructure and product work of Ahmed Fakhfakh, CKA-certified DevOps engineer.">
+  <meta property="og:description" content="From code to cloud. Explore the work of Ahmed Fakhfakh, DevOps engineer certified CKA and AZ-104.">
   <meta property="og:image" content="https://ahmed-fakhfakh-portfolio.vercel.app/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -19,8 +19,10 @@
   <link rel="alternate" hreflang="x-default" href="https://ahmed-fakhfakh-portfolio.vercel.app/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <script type="module" src="app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=20261016-2">
+  <link rel="stylesheet" href="motion.css?v=20261016-2">
+  <script type="module" src="app.js?v=20261016-2"></script>
+  <script type="module" src="motion.js?v=20261016-2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -38,15 +40,16 @@
       <div class="hero-copy">
         <p class="eyebrow hero-eyebrow"><span class="status-dot"></span><span data-i18n="hero.eyebrow">DEVOPS / KUBERNETES ENGINEER</span></p>
         <h1 id="hero-title"><span data-i18n="hero.line1">Built to ship.</span><span class="text-accent" data-i18n="hero.line2">Designed to scale.</span></h1>
-        <p class="hero-intro" data-i18n="hero.intro">I’m Ahmed Fakhfakh, a CKA-certified engineer turning complex infrastructure into dependable delivery.</p>
+        <p class="hero-intro" data-i18n="hero.intro">I’m Ahmed Fakhfakh, certified in Kubernetes and Azure. I turn complex infrastructure into dependable delivery.</p>
         <div class="hero-ctas"><a class="button button-primary" href="#projects"><span data-i18n="hero.projects">Explore my work</span><span aria-hidden="true">↗</span></a><a class="button button-secondary" id="download-cv" href="cv/Ahmed_Fakhfakh_DevOps_Engineer.pdf" download><span data-i18n="hero.cv">Download CV</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg></a></div>
-        <div class="hero-person"><img src="assets/ahmed.jpg" alt="Ahmed Fakhfakh" width="44" height="44"><span data-i18n="hero.location">Based in Tunisia · Working internationally</span></div>
+        <div class="hero-person"><img src="assets/ahmed.webp" alt="Ahmed Fakhfakh" width="44" height="44"><span data-i18n="hero.location">Based in Tunisia · Working internationally</span></div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="art-top"><span><span class="mini-square"></span><span data-i18n="hero.art">INFRASTRUCTURE, BY DESIGN</span></span><span class="art-index">AF / 001</span></div>
         <svg class="cloud-map" viewBox="0 0 560 450" fill="none">
           <defs><linearGradient id="plane" x1="280" y1="40" x2="280" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#17332f"/><stop offset="1" stop-color="#101b22"/></linearGradient><linearGradient id="block" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#244b42"/><stop offset="1" stop-color="#112625"/></linearGradient><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#7f9b9c" opacity=".22"/></pattern></defs>
           <rect width="560" height="450" fill="url(#grid)"/>
+          <g class="cloud-assembly">
           <path d="m70 285 210-113 210 113-210 113Z" fill="#101a21" stroke="#2b3c44"/>
           <path d="m70 273 210-113 210 113-210 113Z" fill="#101c23" stroke="#35534f"/>
           <path d="m70 261 210-113 210 113-210 113Z" fill="url(#plane)" stroke="#54776a"/>
@@ -58,16 +61,19 @@
           <path d="m143 249 36-19 36 19v39l-36 20-36-20Z" fill="#142920" stroke="#42684f"/><path d="m143 249 36 20 36-20m-36 20v39" stroke="#699e79"/>
           <path d="m345 249 36-19 36 19v39l-36 20-36-20Z" fill="#142920" stroke="#42684f"/><path d="m345 249 36 20 36-20m-36 20v39" stroke="#699e79"/>
           <path d="M280 142V98m0 0-54-29m54 29 54-29" stroke="#8de9bd" stroke-width="1.5"/>
-          <circle cx="280" cy="99" r="5" fill="#a6eac3"/><circle cx="226" cy="69" r="4" fill="#a6eac3"/><circle cx="334" cy="69" r="4" fill="#a6eac3"/>
+          <circle class="network-node" cx="280" cy="99" r="5" fill="#a6eac3"/><circle class="network-node" cx="226" cy="69" r="4" fill="#a6eac3"/><circle class="network-node" cx="334" cy="69" r="4" fill="#a6eac3"/>
           <g transform="translate(257 152)" stroke="#b2f4cd" stroke-width="1.5"><circle cx="23" cy="20" r="11"/><circle cx="23" cy="20" r="3"/><path d="M23 5v12m0 6v12M8 20h12m6 0h12M12.5 9.5 21 18m4 4 8.5 8.5m-21 0L21 22m4-4 8.5-8.5"/></g>
           <path d="M178 254v9m-6-6 12 6m-12 0 12-6M380 254v9m-6-6 12 6m-12 0 12-6" stroke="#a6eac3"/>
           <path d="M94 146h71l32 24M397 174l29-16h73M377 330l28 26h76" stroke="#425953"/><circle cx="197" cy="170" r="3" fill="#85ab94"/><circle cx="397" cy="174" r="3" fill="#85ab94"/>
+          <circle class="signal signal-a" r="3"/><circle class="signal signal-b" r="3"/>
+          </g>
           <text x="94" y="135" fill="#9aacb1" font-size="10" font-family="monospace" data-i18n="hero.automate">AUTOMATE</text><text x="428" y="147" fill="#9aacb1" font-size="10" font-family="monospace" data-i18n="hero.orchestrate">ORCHESTRATE</text><text x="407" y="376" fill="#9aacb1" font-size="10" font-family="monospace" data-i18n="hero.observe">OBSERVE</text>
           <text x="280" y="424" text-anchor="middle" fill="#72858c" font-size="10" font-family="monospace" letter-spacing="2" data-i18n="hero.flow">CODE → CONTAINER → CLOUD</text>
         </svg>
-        <div class="art-bottom"><div class="cert-icon">⎈</div><div><strong data-i18n="hero.cka">CKA CERTIFIED</strong><span data-i18n="hero.cert">Certified Kubernetes Administrator</span></div><span class="cert-check">✓</span></div>
+        <div class="art-bottom"><div class="cert-icon">⎈</div><div><strong data-i18n="hero.cka">CKA + AZ-104 CERTIFIED</strong><span data-i18n="hero.cert">Kubernetes &amp; Microsoft Azure</span></div><span class="cert-check">✓</span></div>
       </div>
     </section>
+    <div class="container motion-control"><button id="motion-toggle" type="button" hidden>Pause animations</button></div>
     <div class="stack-strip"><div class="container stack-inner"><span>Kubernetes</span><span class="stack-separator">/</span><span>Azure AKS</span><span class="stack-separator">/</span><span>Terraform</span><span class="stack-separator">/</span><span>GitLab CI/CD</span><span class="stack-separator">/</span><span>Prometheus</span><span class="stack-separator">/</span><span>Docker</span></div></div>
     <section class="section container" id="projects" aria-labelledby="work-title">
       <div class="section-heading"><div><p class="eyebrow" data-i18n="section.work.kicker">01 / SELECTED WORK</p><h2 id="work-title" data-i18n="section.work.title">From code to cloud.</h2></div><p data-i18n="section.work.intro">A selection of infrastructure and product work, grounded in real engineering experience.</p></div>
@@ -76,7 +82,7 @@
     </section>
     <section class="section experience-section" id="experience" aria-labelledby="experience-title"><div class="container"><div class="section-heading"><div><p class="eyebrow" data-i18n="section.experience.kicker">02 / EXPERIENCE</p><h2 id="experience-title" class="long-title" data-i18n="section.experience.title">A developer’s perspective. An operator’s mindset.</h2></div><span class="section-symbol" aria-hidden="true">[ ↗ ]</span></div><div id="experience-list"></div></div></section>
     <section class="section container" id="skills" aria-labelledby="skills-title"><div class="section-heading"><div><p class="eyebrow" data-i18n="section.skills.kicker">03 / TOOLKIT</p><h2 id="skills-title" data-i18n="section.skills.title">The tools behind the work.</h2></div></div><div id="skills-grid" class="skills-grid"></div></section>
-    <section class="section foundations-section" id="about" aria-labelledby="foundations-title"><div class="container"><div class="section-heading"><div><p class="eyebrow" data-i18n="section.credentials.kicker">04 / FOUNDATIONS</p><h2 id="foundations-title" data-i18n="section.credentials.title">Always building on solid ground.</h2></div></div><div class="foundations-grid"><div class="portrait-card"><img src="assets/ahmed.jpg" alt="Ahmed Fakhfakh" width="960" height="928" loading="lazy"><div class="portrait-caption"><strong>Ahmed Fakhfakh</strong><span data-i18n="footer.role">DevOps / Kubernetes Engineer</span></div></div><div class="foundations-content"><div id="credentials" class="credentials"></div><div class="languages"><h3 data-i18n="section.languages.title">A shared language.</h3><div id="language-list"></div></div></div></div></div></section>
+    <section class="section foundations-section" id="about" aria-labelledby="foundations-title"><div class="container"><div class="section-heading"><div><p class="eyebrow" data-i18n="section.credentials.kicker">04 / FOUNDATIONS</p><h2 id="foundations-title" data-i18n="section.credentials.title">Always building on solid ground.</h2></div></div><div class="foundations-grid"><div class="portrait-card"><img src="assets/ahmed.webp" alt="Ahmed Fakhfakh" width="960" height="940" loading="lazy"><div class="portrait-caption"><strong>Ahmed Fakhfakh</strong><span data-i18n="footer.role">DevOps / Kubernetes Engineer</span></div></div><div class="foundations-content"><div id="credentials" class="credentials"></div><div class="languages"><h3 data-i18n="section.languages.title">A shared language.</h3><div id="language-list"></div></div></div></div></div></section>
     <section class="section container contact-section" id="contact" aria-labelledby="contact-title"><div class="contact-panel"><div><p class="eyebrow" data-i18n="contact.kicker">LET’S BUILD SOMETHING</p><h2 id="contact-title" data-i18n="contact.title">Your next deployment starts with a conversation.</h2><p data-i18n="contact.intro">Open to opportunities in Tunisia and internationally, including remote roles and relocation.</p><a class="contact-email" href="mailto:fakhfakh.ahmeed@gmail.com">fakhfakh.ahmeed@gmail.com <span aria-hidden="true">↗</span></a></div><a class="contact-arrow" href="mailto:fakhfakh.ahmeed@gmail.com" aria-label="Send an email to Ahmed Fakhfakh" data-i18n-aria="contact.email">↗</a><div class="contact-links"><a href="https://www.linkedin.com/in/ahmed-fakhfakh/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/fakhfakhahmed" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="tel:+21628820474">+216 28 820 474</a><a id="footer-cv" href="cv/Ahmed_Fakhfakh_DevOps_Engineer.pdf" download data-i18n="contact.cv">Download my CV</a></div></div></section>
   </main>
   <footer class="site-footer container"><a class="brand-mark" href="#" aria-label="Back to top" data-i18n-aria="footer.top">af<span>.</span></a><p>© <span id="year">2026</span> Ahmed Fakhfakh <span class="footer-divider">/</span> <span data-i18n="footer.note">Built with care. Shipped with intent.</span></p><a href="#" class="back-top"><span data-i18n="footer.top">Back to top</span> ↑</a></footer>
@@ -84,5 +90,3 @@
   <noscript><div class="noscript-note">JavaScript enables the full portfolio and language selection. / JavaScript permet d’afficher le portfolio complet et le choix de langue. <a href="cv/Ahmed_Fakhfakh_DevOps_Engineer.pdf">English CV</a> · <a href="cv/Ahmed_Fakhfakh_Ingenieur_DevOps.pdf">CV français</a></div></noscript>
 </body>
 </html>
-
-

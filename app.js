@@ -14,17 +14,17 @@ const translations = {
     'hero.eyebrow': 'DEVOPS / KUBERNETES ENGINEER',
     'hero.line1': 'Built to ship.',
     'hero.line2': 'Designed to scale.',
-    'hero.intro': 'I’m Ahmed Fakhfakh, a CKA-certified engineer turning complex infrastructure into dependable delivery.',
+    'hero.intro': 'I’m Ahmed Fakhfakh, certified in Kubernetes and Azure. I turn complex infrastructure into dependable delivery.',
     'hero.location': 'Based in Tunisia · Working internationally',
     'hero.projects': 'Explore my work',
     'hero.cv': 'Download CV',
-    'hero.cert': 'Certified Kubernetes Administrator',
+    'hero.cert': 'Kubernetes & Microsoft Azure',
     'hero.art': 'INFRASTRUCTURE, BY DESIGN',
     'hero.automate': 'AUTOMATE',
     'hero.orchestrate': 'ORCHESTRATE',
     'hero.observe': 'OBSERVE',
     'hero.flow': 'CODE → CONTAINER → CLOUD',
-    'hero.cka': 'CKA CERTIFIED',
+    'hero.cka': 'CKA + AZ-104 CERTIFIED',
     'hero.note': 'Infrastructure. Automation. A developer’s perspective.',
     'hero.scroll': 'Scroll to explore',
     'metric.nodes': 'Kubernetes nodes',
@@ -61,7 +61,7 @@ const translations = {
     'project.diagram': 'Conceptual overview',
     'language.changed': 'Portfolio language changed to English.',
     'meta.title': 'Ahmed Fakhfakh — DevOps & Kubernetes Engineer',
-    'meta.description': 'Ahmed Fakhfakh, CKA-certified DevOps engineer in Tunisia. Kubernetes, Azure AKS, CI/CD, infrastructure as code, and full-stack development.',
+    'meta.description': 'Ahmed Fakhfakh, DevOps engineer in Tunisia, certified CKA and AZ-104. Kubernetes, Azure AKS, Argo CD, CI/CD, infrastructure as code, and observability.',
   },
   fr: {
     'skip': 'Aller au contenu',
@@ -76,17 +76,17 @@ const translations = {
     'hero.eyebrow': 'INGÉNIEUR DEVOPS / KUBERNETES',
     'hero.line1': 'Du code au cloud.',
     'hero.line2': 'Prêt à évoluer.',
-    'hero.intro': 'Je suis Ahmed Fakhfakh, ingénieur certifié CKA. Je transforme la complexité de l’infrastructure en déploiements fiables.',
+    'hero.intro': 'Je suis Ahmed Fakhfakh, certifié Kubernetes et Azure. Je transforme la complexité de l’infrastructure en déploiements fiables.',
     'hero.location': 'Basé en Tunisie · Ouvert à l’international',
     'hero.projects': 'Découvrir mes projets',
     'hero.cv': 'Télécharger le CV',
-    'hero.cert': 'Certified Kubernetes Administrator',
+    'hero.cert': 'Kubernetes & Microsoft Azure',
     'hero.art': 'L’INFRASTRUCTURE, PAR CONCEPTION',
     'hero.automate': 'AUTOMATISER',
     'hero.orchestrate': 'ORCHESTRER',
     'hero.observe': 'OBSERVER',
     'hero.flow': 'CODE → CONTENEUR → CLOUD',
-    'hero.cka': 'CERTIFIÉ CKA',
+    'hero.cka': 'CERTIFIÉ CKA + AZ-104',
     'hero.note': 'Infrastructure. Automatisation. Regard de développeur.',
     'hero.scroll': 'Découvrir la suite',
     'metric.nodes': 'Nœuds Kubernetes',
@@ -123,32 +123,38 @@ const translations = {
     'project.diagram': 'Vue conceptuelle',
     'language.changed': 'Le portfolio est maintenant en français.',
     'meta.title': 'Ahmed Fakhfakh — Ingénieur DevOps & Kubernetes',
-    'meta.description': 'Ahmed Fakhfakh, ingénieur DevOps certifié CKA en Tunisie. Kubernetes, Azure AKS, CI/CD, infrastructure as code et développement Full-Stack.',
+    'meta.description': 'Ahmed Fakhfakh, ingénieur DevOps en Tunisie, certifié CKA et AZ-104. Kubernetes, Azure AKS, Argo CD, CI/CD, infrastructure as code et observabilité.',
   },
 };
 
 const projects = [
   {
-    category: 'infra', tags: ['Kubernetes', 'Helm', 'GitLab CI/CD', 'NetBox'],
+    category: 'infra', tags: ['Kubernetes', 'Argo CD', 'Helm', 'OpenBao', 'NetBox'],
     en: {
       context: 'BESTLAB / INFRASTRUCTURE', title: 'Kubernetes, under control.',
-      description: 'Operating an OVH-hosted cluster, strengthening security, and connecting 7 nodes and 600+ Services to a reliable inventory.',
+      description: 'Expanding an OVH Kubernetes control plane from 1 to 4 nodes, securing application delivery, and automating inventory for 7 nodes and 600+ Services.',
       bullets: [
-        'Administer Kubernetes networking, RBAC, containerd, and Longhorn storage.',
-        'Build reusable GitLab CI/CD checks with Helm, Kubeconform, Checkov, Kubesec, and OPA/Conftest.',
-        'Deploy NetBox with Helm and synchronize inventory using Python and REST APIs.',
-        'Implement TLS with cert-manager, Secrets encryption through KMS/Vault, and observability with Prometheus, Grafana, and Alertmanager.',
+        'Expanded the control plane from 1 to 4 nodes to strengthen high availability and validated critical cluster components.',
+        'Standardized reusable GitLab CI/CD quality gates with Kubeconform, Checkov, Kubesec, OPA/Conftest, Semgrep, and Trivy.',
+        'Deployed applications with Argo CD, Helm, and Vault; implemented OpenBao authentication with projected JWTs, TokenReview, and least-privilege policies.',
+        'Automated NetBox inventory synchronization for 7 nodes and 600+ Kubernetes Services using Python and REST APIs.',
+        'Operated Odoo and PostgreSQL in preproduction and production; monitored capacity and incidents with Prometheus, Grafana, and Alertmanager.',
+        'Standardized NGINX/Caddy configuration and implemented OpenTelemetry GenAI observability for LLM latency, costs, and response quality.',
+        'Built and deployed Smart Commit, a Conventional Commits tool with AI-assisted suggestions, desktop packaging, and GitLab CI/CD.',
       ],
       diagram: 'Conceptual Kubernetes inventory workflow: 7 nodes and 600+ Services, synchronized through Python and REST APIs to NetBox.',
     },
     fr: {
       context: 'BESTLAB / INFRASTRUCTURE', title: 'Kubernetes, sous contrôle.',
-      description: 'Exploitation d’un cluster sur OVH, renforcement de sa sécurité et synchronisation de 7 nœuds et plus de 600 Services avec un inventaire fiable.',
+      description: 'Extension du plan de contrôle Kubernetes sur OVH de 1 à 4 nœuds, sécurisation des déploiements et inventaire automatisé de 7 nœuds et plus de 600 Services.',
       bullets: [
-        'Administrer le réseau Kubernetes, les RBAC, containerd et le stockage Longhorn.',
-        'Créer des contrôles GitLab CI/CD réutilisables avec Helm, Kubeconform, Checkov, Kubesec et OPA/Conftest.',
-        'Déployer NetBox avec Helm et synchroniser l’inventaire avec Python et des API REST.',
-        'Mettre en place TLS avec cert-manager, le chiffrement des Secrets via KMS/Vault et la supervision avec Prometheus, Grafana et Alertmanager.',
+        'Étendre le plan de contrôle de 1 à 4 nœuds pour renforcer la haute disponibilité et valider les composants critiques du cluster.',
+        'Standardiser les contrôles qualité GitLab CI/CD avec Kubeconform, Checkov, Kubesec, OPA/Conftest, Semgrep et Trivy.',
+        'Déployer les applications avec Argo CD, Helm et Vault ; mettre en place l’authentification OpenBao avec JWT projetés, TokenReview et politiques de moindre privilège.',
+        'Automatiser la synchronisation NetBox pour 7 nœuds et plus de 600 Services Kubernetes via Python et des API REST.',
+        'Exploiter Odoo et PostgreSQL en préproduction et en production ; superviser la capacité et les incidents avec Prometheus, Grafana et Alertmanager.',
+        'Standardiser les configurations NGINX/Caddy et déployer l’observabilité OpenTelemetry GenAI pour la latence, les coûts et la qualité des réponses LLM.',
+        'Concevoir et déployer Smart Commit, un outil Conventional Commits avec suggestions IA, version de bureau et GitLab CI/CD.',
       ],
       diagram: 'Vue conceptuelle de l’inventaire Kubernetes : 7 nœuds et plus de 600 Services synchronisés avec NetBox via Python et des API REST.',
     },
@@ -156,90 +162,85 @@ const projects = [
   {
     category: 'delivery', tags: ['Azure AKS', 'GitHub Actions', 'Terraform', 'Docker'],
     en: {
-      context: 'SAAS CLIENT / CLOUD DELIVERY', title: 'From commit to cluster.',
-      description: 'An end-to-end delivery pipeline for a SaaS client: Docker builds, ACR publishing, and automated deployments on Azure AKS.',
+      context: 'CLIENT PROJECTS / CLOUD DELIVERY', title: 'From commit to cluster.',
+      description: 'Project-based Azure delivery: Docker builds, ACR publishing, and automated AKS deployments backed by Terraform infrastructure.',
       bullets: [
-        'Build a GitHub Actions pipeline from Docker image build to ACR publishing and AKS deployment.',
-        'Manage infrastructure with Terraform and administer namespaces, RBAC, Azure AD, networking, and TLS.',
-        'Improve resilience with HPA, health probes, resource requests and limits, ConfigMaps, and Secrets.',
-        'Troubleshoot pod, image, and networking issues; monitor with Prometheus and Grafana.',
+        'Built GitHub Actions pipelines from Docker image builds to ACR publishing and AKS deployment.',
+        'Managed infrastructure with Terraform and administered namespaces, RBAC, Entra ID/Azure AD, networking, and TLS with NGINX Ingress.',
+        'Configured HPA, health probes, resource limits, and Prometheus/Grafana monitoring.',
+        'Resolved pod, image-pull, DNS, and inter-pod networking issues during freelance client engagements.',
       ],
       diagram: 'Conceptual delivery workflow from GitHub Actions to Docker, Azure Container Registry, and Azure Kubernetes Service, with Terraform infrastructure.',
     },
     fr: {
-      context: 'CLIENT SAAS / DÉPLOIEMENT CLOUD', title: 'Du commit au cluster.',
-      description: 'Un pipeline de déploiement complet pour un client SaaS : builds Docker, publication sur ACR et déploiements automatisés sur Azure AKS.',
+      context: 'MISSIONS CLIENTS / DÉPLOIEMENT CLOUD', title: 'Du commit au cluster.',
+      description: 'Des missions de déploiement Azure : builds Docker, publication sur ACR et déploiements AKS automatisés, avec une infrastructure gérée par Terraform.',
       bullets: [
         'Créer un pipeline GitHub Actions, du build Docker à la publication sur ACR et au déploiement AKS.',
-        'Gérer l’infrastructure avec Terraform, ainsi que les namespaces, les RBAC, Azure AD, le réseau et TLS.',
-        'Renforcer la résilience avec HPA, les sondes de santé, les ressources requests/limits, les ConfigMaps et les Secrets.',
-        'Résoudre les incidents de pods, d’images et de réseau ; superviser avec Prometheus et Grafana.',
+        'Gérer l’infrastructure avec Terraform, ainsi que les espaces de noms, RBAC, Entra ID/Azure AD, le réseau et TLS via NGINX Ingress.',
+        'Configurer HPA, les sondes de santé, les limites de ressources et la supervision Prometheus/Grafana.',
+        'Résoudre les incidents de pods, de téléchargement d’images, de DNS et de réseau entre pods au cours de trois mois de missions freelance.',
       ],
       diagram: 'Vue conceptuelle du déploiement de GitHub Actions vers Docker, Azure Container Registry et Azure Kubernetes Service, avec une infrastructure Terraform.',
     },
   },
   {
-    category: 'dev', tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Socket.io'],
+    category: 'dev', tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Socket.IO'],
     en: {
-      context: 'SOCIAL COMMERCE / FULL-STACK', title: 'Built for connection.',
-      description: 'A social-commerce platform for influencers, connecting secure accounts, online payments, and real-time conversations.',
+      context: 'FRENCH CLIENT / FULL-STACK', title: 'Built for connection.',
+      description: 'Nearly a year building a React, Node.js, and PostgreSQL platform for a French client in a four-person distributed team.',
       bullets: [
         'Develop React interfaces and Node.js services backed by PostgreSQL.',
         'Implement secure authentication and role-based access.',
         'Integrate Stripe payment processing and webhook handling.',
-        'Build real-time messaging and social-feed features with Socket.io in a five-person remote team.',
+        'Develop Socket.IO features while collaborating in a four-person distributed team.',
       ],
-      diagram: 'Conceptual social-commerce architecture: React interface connected to Node.js, PostgreSQL, Stripe payments, and Socket.io messaging.',
+      diagram: 'Conceptual client-platform architecture: React interface connected to Node.js, PostgreSQL, Stripe payments, and Socket.IO features.',
     },
     fr: {
-      context: 'E-COMMERCE SOCIAL / FULL-STACK', title: 'Pensé pour connecter.',
-      description: 'Une plateforme e-commerce sociale pour influenceurs, réunissant comptes sécurisés, paiements en ligne et conversations en temps réel.',
+      context: 'CLIENT FRANÇAIS / FULL-STACK', title: 'Pensé pour connecter.',
+      description: 'Près d’un an de développement sur une plateforme React, Node.js et PostgreSQL pour un client français, au sein d’une équipe distribuée de quatre personnes.',
       bullets: [
         'Développer des interfaces React et des services Node.js avec PostgreSQL.',
         'Mettre en place une authentification sécurisée et une gestion des rôles.',
         'Intégrer le traitement des paiements Stripe et des webhooks.',
-        'Créer une messagerie instantanée et un fil d’actualité avec Socket.io au sein d’une équipe de cinq personnes à distance.',
+        'Développer des fonctionnalités Socket.IO en collaboration avec une équipe distribuée de quatre personnes.',
       ],
-      diagram: 'Architecture conceptuelle de la plateforme : interface React connectée à Node.js, PostgreSQL, Stripe pour les paiements et Socket.io pour la messagerie.',
+      diagram: 'Architecture conceptuelle de la plateforme : interface React connectée à Node.js, PostgreSQL, Stripe pour les paiements et fonctionnalités Socket.IO.',
     },
   },
 ];
 
 const experience = [
   {
-    company: 'Bestlab', tags: ['Kubernetes', 'GitLab CI/CD', 'Helm', 'Vault / OpenBao', 'NetBox'],
-    en: { date: 'Jun 2026 — Present', title: 'DevOps Engineer', context: 'DevOps team of 3', description: 'Operate an OVH-hosted Kubernetes cluster, build reusable delivery and security checks, and automate infrastructure inventory. Support development teams while maintaining observability, DNS, and time services.' },
-    fr: { date: 'Juin 2026 — Présent', title: 'Ingénieur DevOps', context: 'Équipe DevOps de 3 personnes', description: 'Exploitation d’un cluster Kubernetes sur OVH, création de contrôles de déploiement et de sécurité réutilisables, et automatisation de l’inventaire. Accompagnement des équipes de développement, supervision et administration des services DNS et de synchronisation horaire.' },
+    company: 'Bestlab', tags: ['Kubernetes', 'Argo CD', 'GitLab CI/CD', 'OpenBao', 'OpenTelemetry'],
+    en: { date: 'Jun 2026 — Present', title: 'DevOps Engineer', context: 'Tunis, Tunisia', description: 'Expanded the OVH Kubernetes control plane from 1 to 4 nodes and automated inventory for 7 nodes and 600+ Services. Deliver applications with Argo CD and Helm, secure access with OpenBao, and operate Odoo/PostgreSQL. Built Smart Commit and added OpenTelemetry GenAI observability.' },
+    fr: { date: 'Juin 2026 — Aujourd’hui', title: 'Ingénieur DevOps', context: 'Tunis, Tunisie', description: 'Extension du plan de contrôle Kubernetes sur OVH de 1 à 4 nœuds et inventaire automatisé de 7 nœuds et plus de 600 Services. Déploiements avec Argo CD et Helm, sécurisation des accès avec OpenBao et exploitation d’Odoo/PostgreSQL. Conception de Smart Commit et mise en place de l’observabilité OpenTelemetry GenAI.' },
   },
   {
-    company: { en: 'SaaS Client', fr: 'Client SaaS' }, tags: ['Azure AKS', 'GitHub Actions', 'Terraform', 'Prometheus', 'Grafana'],
-    en: { date: 'Jul 2025 — Present', title: 'Freelance DevOps Engineer', context: 'Remote · Team of 6', description: 'Administer Azure AKS and automate the path from Docker builds to production deployments. Strengthen application resilience, troubleshoot Kubernetes incidents, and connect monitoring with product and business needs.' },
-    fr: { date: 'Juil. 2025 — Présent', title: 'Ingénieur DevOps freelance', context: 'À distance · Équipe de 6 personnes', description: 'Administration d’Azure AKS et automatisation des builds Docker jusqu’au déploiement. Renforcement de la résilience, résolution d’incidents Kubernetes et mise en place de la supervision en lien avec les équipes produit et métier.' },
+    company: { en: 'Project-based client engagements', fr: 'Missions ponctuelles pour des clients' }, tags: ['Azure AKS', 'GitHub Actions', 'Terraform', 'Prometheus', 'Grafana'],
+    en: { date: 'Mar 2026 — May 2026', title: 'Freelance DevOps Engineer', context: 'Remote · 3 months', description: 'Administered Azure AKS and automated Docker builds, ACR publishing, and AKS deployments with GitHub Actions. Managed Terraform infrastructure, configured HPA and monitoring, and resolved pod, image-pull, DNS, and networking issues.' },
+    fr: { date: 'Mars 2026 — Mai 2026', title: 'Ingénieur DevOps freelance', context: 'À distance · 3 mois', description: 'Administration d’Azure AKS et automatisation des builds Docker, de la publication sur ACR et des déploiements AKS avec GitHub Actions. Gestion de l’infrastructure Terraform, configuration de HPA et de la supervision, et résolution d’incidents de pods, d’images, de DNS et de réseau.' },
   },
   {
-    company: { en: 'Social E-commerce Startup', fr: 'Startup e-commerce sociale' }, tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Socket.io'],
-    en: { date: 'Oct 2024 — May 2025', title: 'Freelance Full-Stack Developer', context: 'Remote, France · Team of 5', description: 'Developed an influencer-focused social-commerce platform with secure authentication, role-based access, Stripe payments, and real-time messaging and feed features.' },
-    fr: { date: 'Oct. 2024 — Mai 2025', title: 'Développeur Full-Stack freelance', context: 'À distance, France · Équipe de 5 personnes', description: 'Développement d’une plateforme e-commerce sociale pour influenceurs : authentification sécurisée, gestion des rôles, paiements Stripe, messagerie et fil d’actualité en temps réel.' },
+    company: { en: 'Local and French client projects', fr: 'Projets clients locaux et français' }, tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Socket.IO', 'Docker'],
+    en: { date: 'Oct 2023 — May 2025', title: 'Freelance Full-Stack Developer', context: 'Distributed team', description: 'Spent nearly a year in a four-person team building a French client’s React/Node.js/PostgreSQL platform with authentication, roles, Stripe payments, webhooks, and Socket.IO. Delivered SME websites in parallel using MongoDB and MySQL, with Docker/NGINX deployment, maintenance, and client support.' },
+    fr: { date: 'Oct. 2023 — Mai 2025', title: 'Développeur Full-Stack freelance', context: 'Équipe distribuée', description: 'Près d’un an au sein d’une équipe de quatre personnes sur une plateforme React/Node.js/PostgreSQL pour un client français : authentification, rôles, paiements Stripe, webhooks et Socket.IO. Réalisation en parallèle de sites PME avec MongoDB/MySQL, déploiement Docker/NGINX, maintenance et support client.' },
   },
   {
-    company: { en: 'SME Client Websites', fr: 'Sites vitrines PME' }, tags: ['React', 'Node.js', 'MongoDB', 'MySQL', 'Docker', 'NGINX'],
-    en: { date: 'Oct 2023 — Sep 2024', title: 'Freelance Full-Stack Developer', context: 'Local and remote · Two-person team', description: 'Delivered responsive showcase and corporate websites from design through production deployment, working with another developer. Containerized applications and provided maintenance and client support.' },
-    fr: { date: 'Oct. 2023 — Sept. 2024', title: 'Développeur Full-Stack freelance', context: 'Local et à distance · Collaboration en binôme', description: 'Conception et mise en ligne de sites vitrines et institutionnels responsives, en binôme. Conteneurisation des applications, maintenance et support client après déploiement.' },
-  },
-  {
-    company: 'TAC-TIC', tags: ['Spring Boot', 'React', 'Flutter', 'RabbitMQ', 'Docker', 'Jenkins'],
-    en: { date: 'Feb 2023 — Aug 2023', title: 'Full-Stack Developer Intern', context: 'Tunis · Final-year engineering project', description: 'Designed a gamified smart-recycling platform with Spring Boot microservices, React web and Flutter mobile applications. Connected services with RabbitMQ and implemented Docker containerization and Jenkins CI/CD.' },
-    fr: { date: 'Fév. 2023 — Août 2023', title: 'Stagiaire développeur Full-Stack', context: 'Tunis · Projet de fin d’études', description: 'Conception d’une plateforme de recyclage gamifiée avec des microservices Spring Boot, une application web React et une application mobile Flutter. Intégration de RabbitMQ, conteneurisation Docker et pipeline CI/CD Jenkins.' },
+    company: 'TAC-TIC', tags: ['Spring Boot', 'React', 'Flutter', 'RabbitMQ', 'MySQL', 'Jenkins'],
+    en: { date: 'Feb 2023 — Aug 2023', title: 'Full-Stack Developer Intern', context: 'Tunis · Final-year engineering project', description: 'Built a smart-recycling platform with Spring Boot microservices, RabbitMQ, and MySQL, with React web and Flutter mobile applications. Containerized services with Docker and implemented Jenkins CI/CD.' },
+    fr: { date: 'Fév. 2023 — Août 2023', title: 'Stagiaire développeur Full-Stack', context: 'Tunis · Projet de fin d’études', description: 'Création d’une plateforme intelligente de recyclage avec des microservices Spring Boot, RabbitMQ et MySQL, ainsi que des applications React et Flutter. Conteneurisation Docker et pipeline CI/CD Jenkins.' },
   },
 ];
 
 const skills = [
   { icon: 'cluster', en: 'Kubernetes & containers', fr: 'Kubernetes & conteneurs', tags: ['Kubernetes', 'AKS', 'Helm', 'Docker', 'containerd', 'Longhorn', 'NGINX Ingress', 'RBAC', 'HPA'] },
-  { icon: 'pipeline', en: 'CI/CD & infrastructure as code', fr: 'CI/CD & infrastructure as code', tags: ['GitLab CI/CD', 'GitHub Actions', 'Jenkins', 'Terraform', 'Ansible', 'Kubeconform', 'Bash', 'Python'] },
-  { icon: 'cloud', en: 'Azure cloud', fr: 'Cloud Azure', tags: ['AKS', 'ACR', 'Azure AD', { en: 'Virtual Machines', fr: 'Machines virtuelles' }, 'Blob Storage', 'VNets', 'RBAC'] },
-  { icon: 'shield', en: 'Security by design', fr: 'Sécurité dès la conception', tags: ['cert-manager', 'TLS', 'KMS', 'Vault / OpenBao', 'Workload Identity', 'TokenReview', 'Service Accounts', 'Checkov', 'Kubesec', 'OPA / Conftest', 'Semgrep', 'Trivy'] },
-  { icon: 'activity', en: 'Systems & observability', fr: 'Systèmes & observabilité', tags: ['Linux', 'systemd', 'DNS / DNSSEC', 'TSIG', 'Chrony / NTP', 'Prometheus', 'Grafana', 'Alertmanager', 'ELK Stack', 'NetBox', 'Power BI'] },
-  { icon: 'code', en: 'Development & data', fr: 'Développement & données', tags: [{ en: 'REST APIs', fr: 'API REST' }, 'Node.js', 'Express', 'React', 'TypeScript', 'Spring Boot', 'Flutter', 'RabbitMQ', 'Socket.io', 'PostgreSQL', 'Valkey', 'MySQL', 'MongoDB'] },
+  { icon: 'pipeline', en: 'CI/CD & infrastructure as code', fr: 'CI/CD & infrastructure as code', tags: ['GitLab CI/CD', 'GitHub Actions', 'Jenkins', 'Argo CD', 'Terraform', 'Ansible', 'Kubeconform', 'Bash', 'Python'] },
+  { icon: 'cloud', en: 'Cloud platforms', fr: 'Plateformes cloud', tags: ['Azure', 'AKS', 'ACR', 'Entra ID / Azure AD', 'OVH', { en: 'Virtual Machines', fr: 'Machines virtuelles' }, 'Blob Storage', 'VNets', 'RBAC'] },
+  { icon: 'shield', en: 'Security by design', fr: 'Sécurité dès la conception', tags: ['TLS', 'Vault / OpenBao', { en: 'Projected JWTs', fr: 'JWT projetés' }, 'TokenReview', 'Checkov', 'Kubesec', 'OPA / Conftest', 'Semgrep', 'Trivy'] },
+  { icon: 'activity', en: 'Systems & observability', fr: 'Systèmes & observabilité', tags: ['Linux', 'Prometheus', 'Grafana', 'Alertmanager', 'OpenTelemetry GenAI', 'NetBox', 'NGINX', 'Caddy'] },
+  { icon: 'code', en: 'Development & data', fr: 'Développement & données', tags: [{ en: 'REST APIs', fr: 'API REST' }, 'Node.js', 'React', 'Spring Boot', 'Flutter', 'RabbitMQ', 'Socket.IO', 'PostgreSQL', 'MySQL', 'MongoDB', 'Odoo', 'Stripe'] },
 ];
 
 const icons = {
@@ -310,9 +311,9 @@ function projectVisual(category, language, description) {
       <rect x="46" y="141" width="52" height="42" rx="5" fill="#4b3c54"/><rect x="106" y="141" width="53" height="42" rx="5" fill="#3d3448"/>
       <path d="M173 129h43m71 0h40m-20 0V78h20m-20 51v51h20" fill="none" stroke="#aa85b7" stroke-width="1.5"/>
       <rect x="216" y="105" width="71" height="48" rx="9" fill="#3d3448" stroke="#aa85b7"/><text x="251.5" y="133" text-anchor="middle" fill="#eadcf0" font-size="12">Node.js</text>
-      ${[[56, 'PostgreSQL'], [107, 'Stripe'], [158, 'Socket.io']].map(([y, label]) => `<rect x="327" y="${y}" width="106" height="44" rx="8" fill="#302a37" stroke="#756080"/><text x="380" y="${y + 27}" text-anchor="middle" fill="#d9c8e1" font-size="11">${label}</text>`).join('')}
+      ${[[56, 'PostgreSQL'], [107, 'Stripe'], [158, 'Socket.IO']].map(([y, label]) => `<rect x="327" y="${y}" width="106" height="44" rx="8" fill="#302a37" stroke="#756080"/><text x="380" y="${y + 27}" text-anchor="middle" fill="#d9c8e1" font-size="11">${label}</text>`).join('')}
       <text x="103" y="225" text-anchor="middle" fill="#b9a7c3" font-size="10" letter-spacing="1">REACT</text>
-      <text x="230" y="35" text-anchor="middle" fill="#b9a7c3" font-size="10" letter-spacing="2">${language === 'fr' ? 'E-COMMERCE SOCIAL' : 'SOCIAL COMMERCE'}</text>`;
+      <text x="230" y="35" text-anchor="middle" fill="#b9a7c3" font-size="10" letter-spacing="2">${language === 'fr' ? 'PLATEFORME CLIENT' : 'CLIENT PLATFORM'}</text>`;
   }
   // Only fixed, author-controlled SVG fragments are inserted as markup.
   visual.innerHTML = `<svg class="project-diagram" viewBox="0 0 460 260" width="460" height="260" role="img" xmlns="http://www.w3.org/2000/svg">${drawing}</svg>`;
@@ -385,20 +386,27 @@ function renderCredentials(language) {
       element('p', 'credential-label', french ? 'CERTIFICATION' : 'CERTIFICATION'),
       element('h3', '', 'Certified Kubernetes Administrator'),
       element('p', 'credential-issuer', 'CNCF / Linux Foundation'),
-      element('p', 'credential-date', french ? 'Obtenue le 17 décembre 2025' : 'Issued December 17, 2025'),
+      element('p', 'credential-date', french ? 'Décembre 2025' : 'December 2025'),
+    );
+    const azureCertification = element('article', 'credential-card');
+    azureCertification.append(
+      element('p', 'credential-label', 'CERTIFICATION'),
+      element('h3', '', 'AZ-104: Microsoft Azure Administrator'),
+      element('p', 'credential-issuer', 'Microsoft'),
+      element('p', 'credential-date', french ? 'Octobre 2026' : 'October 2026'),
     );
     const education = element('article', 'credential-card');
     education.append(
       element('p', 'credential-label', french ? 'FORMATION' : 'EDUCATION'),
       element('h3', '', french ? 'Diplôme d’ingénieur en informatique' : 'Engineering Degree in Computer Science'),
       element('p', 'credential-issuer', 'ESPRIT, Tunis'),
-      element('p', 'credential-date', french ? 'Délivré le 17 février 2025' : 'Issued February 17, 2025'),
+      element('p', 'credential-date', french ? 'Février 2025' : 'February 2025'),
     );
-    target.replaceChildren(certification, education);
+    target.replaceChildren(certification, azureCertification, education);
   }
   const languages = document.getElementById('language-list');
   if (languages) {
-    const labels = french ? ['Arabe · Langue maternelle', 'Français · Courant', 'Anglais · Courant'] : ['Arabic · Native', 'French · Fluent', 'English · Fluent'];
+    const labels = french ? ['Arabe · Langue maternelle', 'Français · Courant', 'Anglais · Intermédiaire'] : ['Arabic · Native', 'French · Fluent', 'English · Intermediate'];
     languages.replaceChildren(...labels.map(label => element('span', 'language-item', label)));
   }
 }
