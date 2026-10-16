@@ -2,6 +2,10 @@
 
 A responsive English/French portfolio, based on Ahmed's supplied CVs. Includes three engineering case studies, all five professional experiences, the technology stack, education, CKA certification, a portrait, contact links, and both original PDF CVs.
 
+**Live:** [English](https://ahmed-fakhfakh-portfolio.vercel.app/?lang=en) · [Français](https://ahmed-fakhfakh-portfolio.vercel.app/?lang=fr)
+
+**Source:** [fakhfakhahmed/ahmed-fakhfakh-portfolio](https://github.com/fakhfakhahmed/ahmed-fakhfakh-portfolio)
+
 ## Run locally
 
 No dependencies or build step are needed. Serve this directory with any static web server:
